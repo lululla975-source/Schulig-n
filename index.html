@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meine Gedanken über Murat</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+background:black;
+font-family:'Poppins', sans-serif;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+text-align:center;
+overflow:hidden;
+}
+
+canvas{
+position:fixed;
+top:0;
+left:0;
+z-index:-1;
+}
+
+button{
+padding:16px 32px;
+font-size:20px;
+border:none;
+border-radius:12px;
+background:#cba6ff;
+cursor:pointer;
+margin-top:25px;
+}
+
+.book{
+background:#e9dbff;
+width:90%;
+max-width:650px;
+padding:40px;
+border-radius:15px;
+display:none;
+}
+
+.page{
+display:none;
+}
+
+.page.active{
+display:block;
+}
+
+p{
+font-size:18px;
+line-height:1.6;
+}
+
+h1{
+font-size:28px;
+}
+
+h2{
+font-size:26px;
+font-weight:600;
+}
+
+.start{
+color:white;
+}
+
+.center{
+font-size:26px;
+font-weight:600;
+}
+
+.heart{
+position:fixed;
+font-size:30px;
+animation:float 5s linear infinite;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0);
+opacity:1;
+}
+100%{
+transform:translateY(-800px);
+opacity:0;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<canvas id="rain"></canvas>
+
+<div id="startScreen" class="start">
+<h1>Meine Gedanken über Murat.</h1>
+<p>Autor: Drilona Şimşek</p>
+<button onclick="openBook()">Bist du bereit?</button>
+</div>
+
+<div class="book" id="book">
+
+<div class="page active">
+<h1>Disclaimer</h1>
+<p>
+Dies dient NICHT zur Unterhaltung. Alles wurde mit Herz geschrieben und mit liebe.
+Bitte nehmen sie sich Zeit es zu lesen, wenn sie gerade keine Zeit habt,
+dann öffnen sie dieses Buch später wieder.
+</p>
+<button onclick="nextPage()">ich hab zeit</button>
+</div>
+
+<div class="page">
+<p>
+Es war einmal ein kleines Mädchen namens Drilona. Sie war 13 Jahre alt und hatte zwei Geschwister: eine kleine Schwester und eine große Schwester. Ihre große Schwester sah sie früher kaum, weil diese oft draußen war und fast nie zu Hause. Eines Tages kam ihre große Schwester weinend nach Hause. Drilona wusste nicht, was passiert war. Zuerst dachte sie, ihre Schwester hätte sich verletzt. Also ging sie zu ihr und fragte, was los sei. Ihre große Schwester antwortete nur: „Das würdest du nicht verstehen.“ Drilona war ein wenig genervt, weil sie unbedingt den Grund wissen wollte. Doch dann begann ihre Schwester wieder zu sprechen: „Versprich mir, dass du kein Interesse an irgendeinem Jungen zeigen wirst, bis du deinen Schulabschluss geschafft hast.“
+</p>
+<button onclick="nextPage()">zur nächsten Seite</button>
+</div>
+
+<div class="page">
+<p>
+Drilona schaute sie verwirrt an. Dass so etwas ausgerechnet von ihr kam? Schließlich war ihre Schwester seit drei Jahren mit ihrem Freund zusammen, genauer gesagt, seit sie so alt war wie Drilona jetzt, also seit sie 13 war. „Habt ihr Schluss gemacht?“, fragte Drilona. Sie hatte ihre Schwester noch nie so weinen sehen. In der Nacht, nachdem ihre Schwester ihr gesagt hatte, sie solle sich auf ihren Schulabschluss konzentrieren, konnte Drilona immer noch nicht verstehen, was passiert war. „Manchmal ist es besser, einfach nichts zu sagen, anstatt seine Gefühle auszudrücken und am Ende alles schiefgehen zu lassen“, antwortete ihre Schwester. Doch Drilona verstand es immer noch nicht. „Sag schon, habt ihr Schluss gemacht?“, fragte sie erneut. Da fing ihre Schwester wieder an zu weinen.
+</p>
+<button onclick="nextPage()">zur nächsten Seite</button>
+</div>
+
+<div class="page">
+<p>
+Da wusste ich, dass die Antwort „Ja“ sein würde. Ich fragte nicht weiter nach, denn ich wusste, dass verliebte Menschen sich das Herz herausreißen, wenn sie sich verlieren. Deshalb stand ich auf und umarmte sie.
+Ich versuchte, sie zu trösten, obwohl ich keine Ahnung hatte, was ich sagen sollte. Damals war ich nie gut darin, die richtigen Worte zu finden, aber ich gab trotzdem mein Bestes, um sie irgendwie zu beruhigen.
+„Brich unser Versprechen nicht, egal wie sehr wir uns in der Zukunft vielleicht hassen werden“, sagte sie. Ich gab ihr mein Ehrenwort.
+</p>
+<button onclick="nextPage()">zur nächsten Seite</button>
+</div>
+
+<div class="page">
+<p>
+Wer ist denn so dumm und verzeiht jemandem nicht, wenn er sich entschuldigt? dachte ich mir. Ich ging zu ihr und schaute mit ihr aus dem Fenster. „Ich finde trotzdem, dass ein Versuch es wert ist. Ich meine, du machst dich selbst kaputt, wenn du im Stillen leidest und nichts dagegen tust“, sagte ich.
+</p>
+<button onclick="nextPage()">zur nächsten Seite</button>
+</div>
+
+<div class="page">
+<h2>Heute.</h2>
+<p>
+Würdest du mir glauben, dass eine einzige Entschuldigung so viel ausmachen kann?
+Ich habe dir diese Geschichte erzählt, weil sie mich an uns erinnert.
+</p>
+<button onclick="nextPage()">zur nächsten Seite</button>
+</div>
+
+<div class="page">
+<h2>05.06</h2>
+<p>
+Das ist mein Geburtstag. 05.06.07, ein Tag, der heute mehr ist als nur mein Geburtstag.
+Es ist der Tag, an dem ich mit dem besten Jungen der Welt zusammengekommen bin.
+</p>
+<button onclick="nextPage()">zur nächsten Seite</button>
+</div>
+
+<div class="page">
+<p>
+Murat, wir sind seit neun Monaten zusammen. Ich will dich nicht verlieren – weder jetzt noch in der Zukunft.
+Es tut mir leid. Ich liebe dich.
+</p>
+<button onclick="nextPage()">zur nächsten Seite</button>
+</div>
+
+<div class="page">
+<p class="center">
+auch wenn du mir nicht verzeihst,<br><br>
+wenigstens hab ich versucht,<br><br>
+damit du weißt,<br><br>
+das es mir leid tut.<br><br>
+deine Drilona.
+</p>
+<button onclick="showHearts()">Buch schließen</button>
+</div>
+
+</div>
+
+<script>
+
+let pages=document.querySelectorAll(".page");
+let current=0;
+
+function openBook(){
+document.getElementById("startScreen").style.display="none";
+document.getElementById("book").style.display="block";
+}
+
+function nextPage(){
+pages[current].classList.remove("active");
+current++;
+pages[current].classList.add("active");
+}
+
+function showHearts(){
+
+for(let i=0;i<40;i++){
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"%";
+heart.style.bottom="-50px";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{heart.remove();},5000);
+
+}
+
+}
+
+const canvas=document.getElementById("rain");
+const ctx=canvas.getContext("2d");
+
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+
+let rain=[];
+
+for(let i=0;i<150;i++){
+rain.push({
+x:Math.random()*canvas.width,
+y:Math.random()*canvas.height,
+l:Math.random()*20
+});
+}
+
+function drawRain(){
+
+ctx.clearRect(0,0,canvas.width,canvas.height);
+ctx.strokeStyle="rgba(200,200,255,0.5)";
+ctx.lineWidth=1;
+
+for(let i=0;i<rain.length;i++){
+
+let r=rain[i];
+
+ctx.beginPath();
+ctx.moveTo(r.x,r.y);
+ctx.lineTo(r.x,r.y+r.l);
+ctx.stroke();
+
+r.y+=8;
+
+if(r.y>canvas.height){
+r.y=-20;
+r.x=Math.random()*canvas.width;
+}
+
+}
+
+requestAnimationFrame(drawRain);
+
+}
+
+drawRain();
+
+</script>
+
+</body>
+</html>
